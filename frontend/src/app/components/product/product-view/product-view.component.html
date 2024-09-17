@@ -1,0 +1,30 @@
+<div *ngIf="product">
+    <h2>Product Details</h2>
+  
+    <p><strong>Product ID:</strong> {{ product.ProductID }}</p>
+    <p><strong>Name:</strong> {{ product.Name }}</p>
+    <p><strong>Product Number:</strong> {{ product.ProductNumber }}</p>
+    <p><strong>Make Flag:</strong> {{ product.MakeFlag ? 'Yes' : 'No' }}</p>
+    <p><strong>Finished Goods Flag:</strong> {{ product.FinishedGoodsFlag ? 'Yes' : 'No' }}</p>
+    <p><strong>Color:</strong> {{ product.Color || 'N/A' }}</p>
+    <p><strong>Safety Stock Level:</strong> {{ product.SafetyStockLevel }}</p>
+    <p><strong>Reorder Point:</strong> {{ product.ReorderPoint }}</p>
+    <p><strong>Standard Cost:</strong> {{ product.StandardCost | currency }}</p>
+    <p><strong>List Price:</strong> {{ product.ListPrice | currency }}</p>
+    <p><strong>Size:</strong> {{ product.Size || 'N/A' }}</p>
+    <p><strong>Size Unit Measure Code:</strong> {{ product.SizeUnitMeasureCode || 'N/A' }}</p>
+    <p><strong>Weight Unit Measure Code:</strong> {{ product.WeightUnitMeasureCode || 'N/A' }}</p>
+    <p><strong>Weight:</strong> {{ product.Weight ? product.Weight + ' kg' : 'N/A' }}</p>
+    <p><strong>Days to Manufacture:</strong> {{ product.DaysToManufacture }}</p>
+    <p><strong>Product Line:</strong> {{ product.ProductLine || 'N/A' }}</p>
+    <p><strong>Class:</strong> {{ product.Class || 'N/A' }}</p>
+    <p><strong>Style:</strong> {{ product.Style || 'N/A' }}</p>
+    <p><strong>Product Subcategory ID:</strong> {{ product.ProductSubcategoryID || 'N/A' }}</p>
+    <p><strong>Product Model ID:</strong> {{ product.ProductModelID || 'N/A' }}</p>
+    <p><strong>Sell Start Date:</strong> {{ product.SellStartDate | date }}</p>
+    <p><strong>Sell End Date:</strong> {{ product.SellEndDate ? (product.SellEndDate | date) : 'N/A' }}</p>
+    <p><strong>Discontinued Date:</strong> {{ product.DiscontinuedDate ? (product.DiscontinuedDate | date) : 'N/A' }}</p>
+  
+    <button mat-raised-button color="primary" routerLink="/products">Back to Products List</button>
+  </div>
+  

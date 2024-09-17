@@ -1,0 +1,24 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  .login-card {
+    width: 350px;
+    padding: 20px;
+  }
+  
+  .login-input {
+    width: 100%;
+    margin-bottom: 20px;
+  }  
+
+mat-card-title {
+    text-align: center; /* Centrar el título */
+    margin-bottom: 20px; /* Añadir espacio debajo del título */
+    font-size: 24px; /* Tamaño del texto del título */
+    font-weight: bold; /* Poner el título en negrita */
+  }

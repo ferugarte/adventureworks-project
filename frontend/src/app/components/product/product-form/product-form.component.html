@@ -1,0 +1,138 @@
+<div>
+  <h2>{{ productId ? 'Edit Product' : 'Add Product' }}</h2>
+
+  <form (ngSubmit)="onSubmit()">
+    <!-- Name field for the product -->
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput [(ngModel)]="product.Name" name="Name" required>
+    </mat-form-field>
+
+    <!-- Product Number field -->
+    <mat-form-field appearance="fill">
+      <mat-label>Product Number</mat-label>
+      <input matInput [(ngModel)]="product.ProductNumber" name="ProductNumber" required>
+    </mat-form-field>
+
+    <!-- Make Flag selection (Yes/No) -->
+    <mat-form-field appearance="fill">
+      <mat-label>Make Flag</mat-label>
+      <mat-select [(ngModel)]="product.MakeFlag" name="MakeFlag">
+        <mat-option [value]="true">Yes</mat-option>
+        <mat-option [value]="false">No</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <!-- Finished Goods Flag selection (Yes/No) -->
+    <mat-form-field appearance="fill">
+      <mat-label>Finished Goods Flag</mat-label>
+      <mat-select [(ngModel)]="product.FinishedGoodsFlag" name="FinishedGoodsFlag">
+        <mat-option [value]="true">Yes</mat-option>
+        <mat-option [value]="false">No</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <!-- Color input field -->
+    <mat-form-field appearance="fill">
+      <mat-label>Color</mat-label>
+      <input matInput [(ngModel)]="product.Color" name="Color">
+    </mat-form-field>
+
+    <!-- Safety Stock Level field -->
+    <mat-form-field appearance="fill">
+      <mat-label>Safety Stock Level</mat-label>
+      <input matInput type="number" [(ngModel)]="product.SafetyStockLevel" name="SafetyStockLevel" required>
+    </mat-form-field>
+
+    <!-- Reorder Point field -->
+    <mat-form-field appearance="fill">
+      <mat-label>Reorder Point</mat-label>
+      <input matInput type="number" [(ngModel)]="product.ReorderPoint" name="ReorderPoint" required>
+    </mat-form-field>
+
+    <!-- Standard Cost field -->
+    <mat-form-field appearance="fill">
+      <mat-label>Standard Cost</mat-label>
+      <input matInput type="number" [(ngModel)]="product.StandardCost" name="StandardCost" required>
+    </mat-form-field>
+
+    <!-- List Price field -->
+    <mat-form-field appearance="fill">
+      <mat-label>List Price</mat-label>
+      <input matInput type="number" [(ngModel)]="product.ListPrice" name="ListPrice" required>
+    </mat-form-field>
+
+    <!-- Additional fields such as Size, Weight, and other properties -->
+    <mat-form-field appearance="fill">
+      <mat-label>Size</mat-label>
+      <input matInput [(ngModel)]="product.Size" name="Size">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Size Unit Measure Code</mat-label>
+      <input matInput [(ngModel)]="product.SizeUnitMeasureCode" name="SizeUnitMeasureCode">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Weight</mat-label>
+      <input matInput type="number" [(ngModel)]="product.Weight" name="Weight">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Weight Unit Measure Code</mat-label>
+      <input matInput [(ngModel)]="product.WeightUnitMeasureCode" name="WeightUnitMeasureCode">
+    </mat-form-field>
+
+    <!-- Manufacturing and product details -->
+    <mat-form-field appearance="fill">
+      <mat-label>Days To Manufacture</mat-label>
+      <input matInput type="number" [(ngModel)]="product.DaysToManufacture" name="DaysToManufacture" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Product Line</mat-label>
+      <input matInput [(ngModel)]="product.ProductLine" name="ProductLine">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Class</mat-label>
+      <input matInput [(ngModel)]="product.Class" name="Class">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Style</mat-label>
+      <input matInput [(ngModel)]="product.Style" name="Style">
+    </mat-form-field>
+
+    <!-- Product subcategory and model IDs -->
+    <mat-form-field appearance="fill">
+      <mat-label>Product Subcategory ID</mat-label>
+      <input matInput type="number" [(ngModel)]="product.ProductSubcategoryID" name="ProductSubcategoryID">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Product Model ID</mat-label>
+      <input matInput type="number" [(ngModel)]="product.ProductModelID" name="ProductModelID">
+    </mat-form-field>
+
+    <!-- Sell dates and discontinued date -->
+    <mat-form-field appearance="fill">
+      <mat-label>Sell Start Date</mat-label>
+      <input matInput type="date" [(ngModel)]="product.SellStartDate" name="SellStartDate" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Sell End Date</mat-label>
+      <input matInput type="date" [(ngModel)]="product.SellEndDate" name="SellEndDate">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Discontinued Date</mat-label>
+      <input matInput type="date" [(ngModel)]="product.DiscontinuedDate" name="DiscontinuedDate">
+    </mat-form-field>
+
+    <!-- Submit and Back buttons -->
+    <button mat-raised-button color="primary" type="submit">{{ productId ? 'Update' : 'Add' }}</button>
+    <button mat-raised-button color="accent" (click)="goBack()">Back to Products List</button>
+  </form>
+</div>

@@ -1,0 +1,40 @@
+<mat-sidenav-container class="sidenav-container">
+  <!-- Side navigation with links to different sections -->
+  <mat-sidenav #sidenav mode="side" opened="false" class="sidenav">
+    <!-- Navigation links for the dashboard and products -->
+    <p><a mat-button routerLink="/dashboard" (click)="sidenav.close()">Dashboard</a></p>
+    <p><a mat-button routerLink="/products" (click)="sidenav.close()">Product List</a></p>
+    <p><a mat-button routerLink="/products/new" (click)="sidenav.close()">Add New Product</a></p>
+
+    <!-- Logout button with a warning color to make it more prominent -->
+    <p><a mat-button color="warn" (click)="onLogout()">Logout</a></p>
+  </mat-sidenav>
+
+  <!-- Main content of the dashboard with a toolbar -->
+  <mat-sidenav-content>
+    <!-- Toolbar at the top with a toggle button for the sidenav -->
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="sidenav.toggle()" aria-label="Toggle sidenav">
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <!-- Title of the dashboard -->
+      <span>AdventureWorks Inventory</span>
+      <span class="spacer"></span>
+
+      <!-- Notifications and user account icons on the right side of the toolbar -->
+      <button mat-icon-button aria-label="Example icon button with notifications icon">
+        <mat-icon>notifications</mat-icon>
+      </button>
+
+      <button mat-icon-button aria-label="Example icon button with account icon">
+        <mat-icon>account_circle</mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <!-- This is where the routed components will be rendered -->
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

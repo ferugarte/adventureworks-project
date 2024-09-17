@@ -1,0 +1,52 @@
+/* Centra el contenido del componente */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Estilo para los detalles del producto */
+  .details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .details p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .details p strong {
+    color: #000;
+  }
+  
+  /* Estilo del botón */
+  button {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #303f9f;
+  }
+  
